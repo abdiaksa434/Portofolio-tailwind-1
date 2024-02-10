@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+
+.hamburger-lines{
+    @apply block w-[28px] h-[2px] bg-secondary my-2;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-[47deg] ;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45 ;
+}
+
+
+
+
+
+.hamburger-animation-3{
+    @apply origin-bottom-left  transition duration-300 ease-in-out;
+}
+.hamburger-animation-1{
+    @apply origin-top-left transition duration-300 ease-in-out;
+}
+
+
+/* header blur */
+
+.navbar-blur{
+    @apply fixed z-[9999] bg-white opacity-90;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+}
